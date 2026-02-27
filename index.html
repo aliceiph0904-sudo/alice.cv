@@ -30,7 +30,7 @@
 
         <hr>
 
-        <section>
+        <section id="contacts-section">
           <button
             class="btn btn-link h5 p-0 mb-2 contacts-toggle"
             type="button"
@@ -91,6 +91,9 @@
       const ogDescription = document.querySelector('meta[property="og:description"]');
       const langEn = document.getElementById('lang-en');
       const langRu = document.getElementById('lang-ru');
+      const contactsSection = document.getElementById('contacts-section');
+      const contactsTitle = document.getElementById('contacts-title');
+      const contactsCollapse = document.getElementById('contacts-collapse');
 
       function applyLanguage(language) {
         const content = translations[language];
@@ -130,6 +133,14 @@
       langRu.addEventListener('click', () => {
         applyLanguage('ru');
         localStorage.setItem('siteLanguage', 'ru');
+      });
+
+      contactsSection.addEventListener('click', (event) => {
+        if (event.target.closest('#contacts-title') || event.target.closest('#contacts-collapse a')) {
+          return;
+        }
+
+        contactsTitle.click();
       });
     </script>
   </body>
