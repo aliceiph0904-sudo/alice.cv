@@ -221,10 +221,11 @@ a:hover {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9rem;
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 0.18rem;
+  justify-content: space-between;
+  width: 100%;
+  gap: 0;
   margin-left: 0;
   margin-bottom: 0.2rem !important;
   line-height: 1.2;
@@ -232,7 +233,11 @@ a:hover {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 0;
+  padding: 0 1rem;
+}
+
+#contacts-label {
+  text-align: left;
 }
 
 .contacts-arrow {
