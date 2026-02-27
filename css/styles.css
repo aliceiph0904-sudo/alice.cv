@@ -32,6 +32,7 @@ main {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.3s ease;
   text-align: center;
+  position: relative;
 }
 
 .card:hover {
@@ -101,6 +102,28 @@ h2.h5 {
   color: #ffffff !important;
 }
 
+.lang-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  gap: 0.35rem;
+  min-width: 5.5rem;
+  font-weight: 600;
+}
+
+.lang-toggle .lang-option {
+  min-width: 2.4rem;
+  padding: 0.2rem 0.45rem;
+}
+
+.lang-toggle .active-language {
+  color: #ffffff;
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  border-radius: 6px;
+}
+
 /* Links styling */
 a {
   color: var(--accent-blue);
@@ -146,6 +169,11 @@ section:last-of-type {
   .card {
     border-radius: 8px;
     padding: 1.25rem !important;
+  }
+
+  .lang-toggle {
+    top: 0.75rem;
+    right: 0.75rem;
   }
 
   .profile-img {
